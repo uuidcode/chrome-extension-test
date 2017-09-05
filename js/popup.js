@@ -1,5 +1,5 @@
 jQuery(function() {
-    $('body').html('Hello, World!');
+    //$('body').html('Hello, World!');
 });
 
 chrome.extension.onMessage.addListener(function(request, sender) {
@@ -10,11 +10,11 @@ chrome.extension.onMessage.addListener(function(request, sender) {
 
 function onWindowLoad() {
     chrome.tabs.executeScript(null, {
-        file: "js/getSource.js"
+        file: "js/jquery-1.12.4.min.js"
     });
 
     chrome.tabs.executeScript(null, {
-        file: "js/jquery-1.12.4.min.js"
+        file: "js/getSource.js"
     });
 }
 
