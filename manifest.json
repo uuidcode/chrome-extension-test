@@ -12,5 +12,13 @@
   "permissions": [
     "tabs",
     "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.co.kr/*"],
+      "css": ["css/styles.css"],
+      "js": ["js/jquery-1.12.4.min.js", "js/myscript.js"],
+      "run_at" : "document_end"
+    }
   ]
 }
